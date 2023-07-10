@@ -68,10 +68,6 @@ This sequence makes the LED blink - it will be on for a quarter of a second, the
   - Launching Program    
 
 - 👉  Check the Result
-  - You will see `Hello World!!!` on the serial terminal.         
-   ![image](https://github.com/Advance-Innovation-Centre-AIC/BIIL_MTB-100_Hello_World_and_LED_Blinking_Programming_Template/assets/88732241/2eb45911-1df7-4581-9e73-2e79c28364a5)
-  - LED Blinking        
-    ![image](https://github.com/Advance-Innovation-Centre-AIC/BIIL_MTB-100_Hello_World_and_LED_Blinking_Programming_Template/assets/88732241/e43ee093-c57b-4d65-81a2-e8326e729b74)
 
 ### 🎉  Congratulations! You can now complete Lab100 by creating, building, and launching the application program.
 
