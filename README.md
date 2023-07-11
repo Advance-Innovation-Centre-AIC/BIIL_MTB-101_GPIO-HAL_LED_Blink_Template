@@ -1,4 +1,4 @@
-# BIIL_MTB-101_GPIO_LED_Blink_Template
+# BIIL_MTB-101_GPIO-HAL_LED_Blink_Template
 ### Lab Objective:
 The objective of this lab is to familiarize students with the basic concepts of GPIO (General Purpose Input Output) using a PSoC 6 microcontroller from Cypress (CY8CKIT-062S2-43012 Infineon Board). By the end of this lab, students should be able to initialize GPIOs, manipulate GPIO states, and create basic delay functions.
 
