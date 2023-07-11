@@ -34,14 +34,13 @@ This sequence will result in the LED blinking on and off every 250 milliseconds.
 
 - 👉  Select Application         
 
-#### Note add pic....
-
-    - Coding:
-    ```
+#### Note add pic 
+  - Coding
+```
     for (;;)
     {
       	 /* Drive CYBSP_USER_LED low (LED on) */
-  		cyhal_gpio_write(CYBSP_USER_LED, 1);
+  		cyhal_gpio_write(CYBSP_USER_LED, 0);
   
   		/* Wait 250 ms */
   		cyhal_system_delay_ms(250);
@@ -52,12 +51,14 @@ This sequence will result in the LED blinking on and off every 250 milliseconds.
   		/* Wait 250 ms */
   		cyhal_system_delay_ms(250);
     }
-    ```
-    - `for (;;) { ... }`: This is an infinite loop. Everything within this loop will be repeated indefinitely. This is common in embedded systems where the program is meant to run until the device is powered off.
-    - `cyhal_gpio_write(CYBSP_USER_LED, 0);`: This sets the state of the CYBSP_USER_LED GPIO pin to low (0 volts), which typically turns the LED on.
-    - `cyhal_system_delay_ms(250);`: This waits for 250 milliseconds.
-    - `cyhal_gpio_write(CYBSP_USER_LED, 1);`: This sets the state of the CYBSP_USER_LED GPIO pin to high (usually 3.3 or 5 volts, depending on the microcontroller), which typically turns the LED off.
-    -`cyhal_system_delay_ms(250);`: This waits for another 250 milliseconds.
+
+```
+
+  - `for (;;) { ... }`: This is an infinite loop. Everything within this loop will be repeated indefinitely. This is common in embedded systems where the program is meant to run until the device is powered off.
+  - `cyhal_gpio_write(CYBSP_USER_LED, 0);`: This sets the state of the CYBSP_USER_LED GPIO pin to low (0 volts), which typically turns the LED on.
+  - `cyhal_system_delay_ms(250);`: This waits for 250 milliseconds.
+  - `cyhal_gpio_write(CYBSP_USER_LED, 1);`: This sets the state of the CYBSP_USER_LED GPIO pin to high (usually 3.3 or 5 volts, depending on the microcontroller), which typically turns the LED off.
+  -`cyhal_system_delay_ms(250);`: This waits for another 250 milliseconds.
 
 This sequence makes the LED blink - it will be on for a quarter of a second, then off for a quarter of a second, continuously.
 - 👉  Build Application      
