@@ -111,18 +111,6 @@ int main(void)
 
     for (;;)
     {
-    	 /* Drive CYBSP_USER_LED low (LED on) */
-		cyhal_gpio_write(CYBSP_USER_LED, 1);
-
-		/* Wait 250 ms */
-		cyhal_system_delay_ms(250);
-
-		/* Drive CYBSP_USER_LED high (LED off) */
-		cyhal_gpio_write(CYBSP_USER_LED, 1);
-
-		/* Wait 250 ms */
-		cyhal_system_delay_ms(250);
-
 
     }
 }
