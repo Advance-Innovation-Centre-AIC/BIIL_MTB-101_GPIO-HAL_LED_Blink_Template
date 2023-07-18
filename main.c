@@ -43,75 +43,52 @@
 /*******************************************************************************
 * Header Files
 *******************************************************************************/
+#include "cy_pdl.h"
 #include "cyhal.h"
 #include "cybsp.h"
-
-/*******************************************************************************
-* Macros
-*******************************************************************************/
+#include "cy_retarget_io.h"
 
 
-/*******************************************************************************
-* Global Variables
-*******************************************************************************/
-
-
-/*******************************************************************************
-* Function Prototypes
-*******************************************************************************/
-
-
-/*******************************************************************************
-* Function Definitions
-*******************************************************************************/
-
-/*******************************************************************************
-* Function Name: main
-********************************************************************************
-* Summary:
-* This is the main function for CPU. It...
-*    1.
-*    2.
-*
-* Parameters:
-*  void
-*
-* Return:
-*  int
-*
-*******************************************************************************/
 int main(void)
 {
     cy_rslt_t result;
 
-#if defined (CY_DEVICE_SECURE)
-    cyhal_wdt_t wdt_obj;
-
-    /* Clear watchdog timer so that it doesn't trigger a reset */
-    result = cyhal_wdt_init(&wdt_obj, cyhal_wdt_get_max_timeout_ms());
-    CY_ASSERT(CY_RSLT_SUCCESS == result);
-    cyhal_wdt_free(&wdt_obj);
-#endif
-
     /* Initialize the device and board peripherals */
     result = cybsp_init();
-
-//    cyhal_gpio_init(CYBSP_USER_LED, CYHAL_GPIO_DIR_OUTPUT, CYHAL_GPIO_DRIVE_STRONG, 1);
-    /* Initialize the User LED as an output, initial value set to high (LED off) */
-    result = cyhal_gpio_init(CYBSP_USER_LED, CYHAL_GPIO_DIR_OUTPUT, CYHAL_GPIO_DRIVE_STRONG, 1);
-
-    /* Board init failed. Stop program execution */
+    /* BSP init failed. Stop program execution */
     if (result != CY_RSLT_SUCCESS)
     {
         CY_ASSERT(0);
     }
 
-    /* Enable global interrupts */
+    /* Initialize the User LED */
+    result = cyhal_gpio_init(CYBSP_USER_LED, CYHAL_GPIO_DIR_OUTPUT, CYHAL_GPIO_DRIVE_STRONG, CYBSP_LED_STATE_OFF);
+    /* GPIO init failed. Stop program execution */
+    if (result != CY_RSLT_SUCCESS)
+    {
+        CY_ASSERT(0);
+    }
+
+    /* Initialize retarget-io to use the debug UART port */
+    result = cy_retarget_io_init(CYBSP_DEBUG_UART_TX, CYBSP_DEBUG_UART_RX, CY_RETARGET_IO_BAUDRATE);
+    /* retarget-io init failed. Stop program execution */
+    if (result != CY_RSLT_SUCCESS)
+    {
+        CY_ASSERT(0);
+    }
+
     __enable_irq();
+
+    printf("\x1b[2J\x1b[;H");
 
     for (;;)
     {
-
+        cyhal_gpio_write(CYBSP_USER_LED, CYBSP_LED_STATE_ON);
+        printf("LED ON \r\n");
+        cyhal_system_delay_ms(5000);
+        cyhal_gpio_write(CYBSP_USER_LED, CYBSP_LED_STATE_OFF);
+        printf("LED OFF \r\n");
+        cyhal_system_delay_ms(5000);
     }
 }
 

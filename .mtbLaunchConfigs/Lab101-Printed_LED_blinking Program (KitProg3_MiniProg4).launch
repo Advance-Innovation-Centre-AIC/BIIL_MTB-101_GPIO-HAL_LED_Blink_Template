@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <launchConfiguration type="ilg.gnumcueclipse.debug.gdbjtag.openocd.launchConfigurationType">
     <stringAttribute key="com.cypress.studio.launch.mode" value="run"/>
-    <stringAttribute key="com.cypress.studio.launch.owner.0" value="806ea391-9dd3-4cce-a8e4-d2716eefdcce"/>
+    <stringAttribute key="com.cypress.studio.launch.owner.0" value="7ef3a5b6-bbfe-40e9-b1b9-81fcf1cacedd"/>
     <booleanAttribute key="ilg.gnumcueclipse.debug.gdbjtag.openocd.doContinue" value="false"/>
     <booleanAttribute key="ilg.gnumcueclipse.debug.gdbjtag.openocd.doDebugInRam" value="false"/>
     <booleanAttribute key="ilg.gnumcueclipse.debug.gdbjtag.openocd.doFirstReset" value="false"/>
@@ -23,8 +23,8 @@
     <stringAttribute key="ilg.gnumcueclipse.debug.gdbjtag.openocd.otherInitCommands" value=""/>
     <stringAttribute key="ilg.gnumcueclipse.debug.gdbjtag.openocd.otherRunCommands" value="quit"/>
     <stringAttribute key="ilg.gnumcueclipse.debug.gdbjtag.openocd.secondResetType" value="run"/>
-    <stringAttribute key="ilg.gnumcueclipse.debug.gdbjtag.svdPath" value="${cy_prj_path:806ea391-9dd3-4cce-a8e4-d2716eefdcce}/../mtb_shared/mtb-pdl-cat1/release-v3.4.0/devices/COMPONENT_CAT1A/svd/psoc6_02.svd"/>
-    <stringAttribute key="org.eclipse.cdt.debug.gdbjtag.core.imageFileName" value="${cy_prj_path:806ea391-9dd3-4cce-a8e4-d2716eefdcce}/build/APP_CY8CKIT-062S2-43012/Debug/mtb-example-empty-app.hex"/>
+    <stringAttribute key="ilg.gnumcueclipse.debug.gdbjtag.svdPath" value="${cy_prj_path:7ef3a5b6-bbfe-40e9-b1b9-81fcf1cacedd}/../mtb_shared/mtb-pdl-cat1/release-v3.4.0/devices/COMPONENT_CAT1A/svd/psoc6_02.svd"/>
+    <stringAttribute key="org.eclipse.cdt.debug.gdbjtag.core.imageFileName" value="${cy_prj_path:7ef3a5b6-bbfe-40e9-b1b9-81fcf1cacedd}/build/APP_CY8CKIT-062S2-43012/Debug/mtb-example-hal-hello-world.hex"/>
     <stringAttribute key="org.eclipse.cdt.debug.gdbjtag.core.imageOffset" value=""/>
     <stringAttribute key="org.eclipse.cdt.debug.gdbjtag.core.ipAddress" value="localhost"/>
     <stringAttribute key="org.eclipse.cdt.debug.gdbjtag.core.jtagDevice" value="GNU MCU OpenOCD"/>
@@ -47,11 +47,11 @@
     <booleanAttribute key="org.eclipse.cdt.dsf.gdb.UPDATE_THREADLIST_ON_SUSPEND" value="false"/>
     <intAttribute key="org.eclipse.cdt.launch.ATTR_BUILD_BEFORE_LAUNCH_ATTR" value="2"/>
     <stringAttribute key="org.eclipse.cdt.launch.COREFILE_PATH" value=""/>
-    <stringAttribute key="org.eclipse.cdt.launch.PROGRAM_NAME" value="${cy_prj_path:806ea391-9dd3-4cce-a8e4-d2716eefdcce}/build/APP_CY8CKIT-062S2-43012/Debug/mtb-example-empty-app.hex"/>
-    <stringAttribute key="org.eclipse.cdt.launch.PROJECT_ATTR" value="LED_blinking"/>
+    <stringAttribute key="org.eclipse.cdt.launch.PROGRAM_NAME" value="${cy_prj_path:7ef3a5b6-bbfe-40e9-b1b9-81fcf1cacedd}/build/APP_CY8CKIT-062S2-43012/Debug/mtb-example-hal-hello-world.hex"/>
+    <stringAttribute key="org.eclipse.cdt.launch.PROJECT_ATTR" value="Lab101-Printed_LED_blinking"/>
     <booleanAttribute key="org.eclipse.cdt.launch.PROJECT_BUILD_CONFIG_AUTO_ATTR" value="true"/>
     <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
-        <listEntry value="/LED_blinking"/>
+        <listEntry value="/Lab101-Printed_LED_blinking"/>
     </listAttribute>
     <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
         <listEntry value="4"/>
